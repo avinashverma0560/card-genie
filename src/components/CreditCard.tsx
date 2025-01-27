@@ -23,9 +23,12 @@ export const CreditCard: React.FC<CreditCardProps> = ({
         isGenerating && "animate-card-rotate"
       )}
     >
-      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-background/40 to-background/10" />
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#9b87f5]/40 to-[#7E69AB]/10" />
       
+      {/* Card content */}
       <div className="relative z-10 h-full flex flex-col justify-between">
+        {/* Header */}
         <div className="flex justify-between items-start">
           <div className="space-y-1">
             <p className="text-xs uppercase tracking-wider text-muted-foreground">
@@ -35,11 +38,12 @@ export const CreditCard: React.FC<CreditCardProps> = ({
               {details?.brand || 'Card Brand'}
             </p>
           </div>
-          <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#9b87f5]/20 to-[#7E69AB]/10 flex items-center justify-center">
             <span className="text-xl">💳</span>
           </div>
         </div>
 
+        {/* Card details */}
         <div className="space-y-4">
           <div className="space-y-1">
             <p className="text-xs uppercase tracking-wider text-muted-foreground">
